@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":6,"unescape":true,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Personal blog of a CS student at Leeds">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zuwei Wang">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Zuwei Wang">
+<meta property="og:description" content="Personal blog of a CS student at Leeds">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Zuwei Wang">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Zuwei Wang</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Zuwei Wang</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Notes on CS, thinking, and life</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zuwei Wang"
+      src="/images/avatar.svg">
+  <p class="site-author-name" itemprop="name">Zuwei Wang</p>
+  <div class="site-description" itemprop="description">Personal blog of a CS student at Leeds</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zuwei-wang" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zuwei-wang" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:stevenwangzv@gmail.com" title="E-Mail → mailto:stevenwangzv@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/01/05/%E5%BE%AE%E4%BF%A1%E6%9B%B4%E6%96%B0%E7%BB%88%E7%BB%93%E9%A1%B9%E7%9B%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Zuwei Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zuwei Wang">
+      <meta itemprop="description" content="Personal blog of a CS student at Leeds">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Zuwei Wang">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/01/05/%E5%BE%AE%E4%BF%A1%E6%9B%B4%E6%96%B0%E7%BB%88%E7%BB%93%E9%A1%B9%E7%9B%AE/" class="post-title-link" itemprop="url">微信的一次更新，终结了我的项目</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-01-05 03:29:17" itemprop="dateCreated datePublished" datetime="2026-01-05T03:29:17Z">2026-01-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-01-19 18:26:20" itemprop="dateModified" datetime="2026-01-19T18:26:20Z">2026-01-19</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="微信的一次更新，终结了我的项目"><a href="#微信的一次更新，终结了我的项目" class="headerlink" title="微信的一次更新，终结了我的项目"></a>微信的一次更新，终结了我的项目</h1><p>我曾经做过一个项目。</p>
+<p>它的出发点很简单：<br>当信息以<strong>截图</strong>的形式出现时，人类理解它的效率会急剧下降。</p>
+<p>尤其是在微信里。</p>
+<p>长聊天、交易记录、纠纷对话、工作沟通——<br>它们被切割成一张又一张图片，信息存在，但结构消失了。</p>
+<p>这个项目试图解决的，从来不是“截图”本身。</p>
+<hr>
+<h2 id="我最初想解决的，并不是滚动截图"><a href="#我最初想解决的，并不是滚动截图" class="headerlink" title="我最初想解决的，并不是滚动截图"></a>我最初想解决的，并不是滚动截图</h2><p>一开始，我观察到的不是“截图不够长”，而是：</p>
+<ul>
+<li>信息被图像化之后，<strong>无法被理解</strong></li>
+<li>人只能“看”，却不能“分析”</li>
+<li>时间线、角色、因果关系全部被压平</li>
+</ul>
+<p>所以这个项目真正的目标是：</p>
+<blockquote>
+<p><strong>从视觉输入中，恢复结构、语义与上下文。</strong></p>
+</blockquote>
+<p>也就是说，它是一个“理解截图”的项目，而不是“生成截图”的项目。</p>
+<hr>
+<h2 id="技术上，它是可以继续做下去的"><a href="#技术上，它是可以继续做下去的" class="headerlink" title="技术上，它是可以继续做下去的"></a>技术上，它是可以继续做下去的</h2><p>从纯技术角度看，这个项目并没有走到尽头。</p>
+<p>视觉模型可以更准，<br>结构化规则可以更复杂，<br>理解层可以继续往“分析”和“判断”延伸。</p>
+<p>如果只是为了“把它做完”，我完全可以继续。</p>
+<p>但问题恰恰不在这里。</p>
+<hr>
+<h2 id="微信更新发生的那一刻"><a href="#微信更新发生的那一刻" class="headerlink" title="微信更新发生的那一刻"></a>微信更新发生的那一刻</h2><p>就在我启动这个项目一周后，微信Windows版更新了4.1.5  </p>
+<p>当微信上线滚动截图功能时，我并没有震惊。<br><a target="_blank" rel="noopener" href="https://weixin.qq.com/updates?platform=windows&version=4.1.5">微信 4.1.5 更新说明</a></p>
+<p>相反，那一刻更像是一种<strong>确认</strong>：</p>
+<ul>
+<li>这个方向是对的  </li>
+<li>这个问题足够普遍  </li>
+<li>平台迟早会下场</li>
+</ul>
+<p>但同时，我也意识到另一件事：</p>
+<blockquote>
+<p><strong>当平台开始解决你正在解决的问题时，你必须重新评估继续做下去的意义。</strong></p>
+</blockquote>
+<p>不是“还能不能赢”，<br>而是——<br><strong>你还剩下什么是不可替代的。</strong></p>
+<hr>
+<h2 id="为什么我选择“终结”，而不是“硬做”"><a href="#为什么我选择“终结”，而不是“硬做”" class="headerlink" title="为什么我选择“终结”，而不是“硬做”"></a>为什么我选择“终结”，而不是“硬做”</h2><p>我最终决定停止这个项目，原因很简单，也很现实。</p>
+<p>继续做下去，它会变成：</p>
+<ul>
+<li>一个技术上越来越复杂  </li>
+<li>产品上却越来越边缘  </li>
+<li>用户触达路径几乎不存在  </li>
+<li>成本持续上升、意义持续下降的系统</li>
+</ul>
+<p>这不是我想要的结果。</p>
+<p><strong>技术可以推进，但价值在收缩。</strong></p>
+<p>在这种情况下，继续并不是坚持，而是惯性。</p>
+<p>所以我选择终结。</p>
+<p>不是因为做不了，<br>而是因为<strong>不值得再做下去</strong>。</p>
+<hr>
+<h2 id="这个项目真正留下了什么"><a href="#这个项目真正留下了什么" class="headerlink" title="这个项目真正留下了什么"></a>这个项目真正留下了什么</h2><p>它没有变成一个产品，但它留下了很多更重要的东西。</p>
+<ul>
+<li>我真正理解了视觉模型的能力边界  </li>
+<li>我开始敬畏封闭平台的系统性力量  </li>
+<li>我意识到“技术正确”并不等于“产品必要”  </li>
+<li>更重要的是——<br><strong>我学会了什么时候该停</strong></li>
+</ul>
+<p>这是一个很少有人认真讨论的能力。</p>
+<hr>
+<h2 id="终结，不是失败，而是归档"><a href="#终结，不是失败，而是归档" class="headerlink" title="终结，不是失败，而是归档"></a>终结，不是失败，而是归档</h2><p>这个项目不会再继续推进。</p>
+<p>但它不会被删除。</p>
+<p>代码被封存，<br>想法被保留，<br>能力会在未来的某个系统里，以另一种形式重新出现。</p>
+<p>我没有放弃这条路，<br>我只是暂时不在这条路上行走。</p>
+<hr>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>平台会不断吞噬“看起来聪明的点子”，<br>这是必然的。</p>
+<p>真正留下来的，永远是<strong>更底层的认知和判断能力</strong>。</p>
+<p>这个项目没有让我多一个产品，<br>但让我成为了一个更清醒的构建者。</p>
+<p>对我来说，这已经足够。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/12/17/%E9%9F%B3%E4%B9%90%E7%A7%91%E5%AD%A6%E5%88%86%E6%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Zuwei Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zuwei Wang">
+      <meta itemprop="description" content="Personal blog of a CS student at Leeds">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Zuwei Wang">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/12/17/%E9%9F%B3%E4%B9%90%E7%A7%91%E5%AD%A6%E5%88%86%E6%9E%90/" class="post-title-link" itemprop="url">科学角度分析嘻哈音乐</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-12-17 00:36:00" itemprop="dateCreated datePublished" datetime="2025-12-17T00:36:00Z">2025-12-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-01-19 18:26:20" itemprop="dateModified" datetime="2026-01-19T18:26:20Z">2026-01-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9F%B3%E4%B9%90/" itemprop="url" rel="index"><span itemprop="name">音乐</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="一个非常具体的瞬间"><a href="#一个非常具体的瞬间" class="headerlink" title="一个非常具体的瞬间"></a>一个非常具体的瞬间</h2><p>有些音乐带来的反应，并不经过情绪。</p>
+<p>不是“觉得好听”，<br>而是一种更直接的生理信号：<br>鸡皮疙瘩、短暂失重、时间感模糊。</p>
+<p>这个瞬间，对我来说反复出现在 <em>SICKO MODE</em> 的后半段——<br>那句被刻意放慢的 <strong>“back in high school…”</strong>。</p>
+<p>奇怪的是，这一段既不最炸，也不是整首歌的高潮，却稳定触发身体反应。这让我开始怀疑：</p>
+<p><strong>这种体验，真的只是主观品味吗？</strong></p>
+<hr>
+<h2 id="大脑并不是在“听音乐”，而是在做时间预测"><a href="#大脑并不是在“听音乐”，而是在做时间预测" class="headerlink" title="大脑并不是在“听音乐”，而是在做时间预测"></a>大脑并不是在“听音乐”，而是在做时间预测</h2><p>从神经科学角度看，人类不是被动接收音乐。</p>
+<p><strong>English:</strong> The brain constantly predicts what comes next in music.<br><strong>中文：</strong> 大脑在听音乐时，会持续预测下一步会发生什么。</p>
+<p>可以把它理解为一个实时运行的预测程序：</p>
+<ul>
+<li>节奏 &#x3D; 时钟信号（clock）</li>
+<li>小节结构 &#x3D; 循环</li>
+<li>Drop &#x2F; 转段 &#x3D; 中断（interrupt）</li>
+</ul>
+<p>当预测成立，一切稳定；<br>当预测被轻微打破，而不是彻底推翻——<br>多巴胺最容易释放。</p>
+<p>这也是为什么：<br><strong>完全规则的音乐会无聊，完全混乱的音乐会令人疲惫。</strong></p>
+<hr>
+<h2 id="SICKO-MODE-在做什么？"><a href="#SICKO-MODE-在做什么？" class="headerlink" title="SICKO MODE 在做什么？"></a>SICKO MODE 在做什么？</h2><p>这首歌前半段反复打断你的预测系统。</p>
+<p>Beat switch 不是为了炫技，而是在不断迫使大脑<strong>重新同步时间模型</strong>。<br>当预测成本持续升高，神经系统会进入一种“高度警觉但不稳定”的状态。</p>
+<p>而就在这个时候——<br>音乐突然降速、减法、抽掉复杂结构。</p>
+<p><strong>预测被解除。</strong></p>
+<p>这不是高潮，是<strong>安全窗口</strong>。</p>
+<hr>
+<h2 id="“back-in-high-school”是一条记忆指令"><a href="#“back-in-high-school”是一条记忆指令" class="headerlink" title="“back in high school”是一条记忆指令"></a>“back in high school”是一条记忆指令</h2><p>这句话本身并不重要，重要的是它的形式。</p>
+<p>它不描述具体事件，只指向一个人生阶段。</p>
+<p><strong>English:</strong> It activates autobiographical memory systems.<br><strong>中文：</strong> 它会触发自传式记忆系统。</p>
+<p>即使你没有刻意思考高中发生了什么，大脑也会自动扫描：</p>
+<ul>
+<li>旧身份</li>
+<li>未完成的可能性</li>
+<li>过去版本的自己</li>
+</ul>
+<p>这一刻，你听到的已经不只是歌词，<br>而是<strong>你自己的时间线被短暂加载</strong>。</p>
+<hr>
+<h2 id="为什么声音听起来像“回忆”"><a href="#为什么声音听起来像“回忆”" class="headerlink" title="为什么声音听起来像“回忆”"></a>为什么声音听起来像“回忆”</h2><p>这一段的人声被刻意处理得不清晰。</p>
+<p>混响加大、空间被拉远、边缘被模糊。</p>
+<p><strong>English:</strong> The brain interprets reverb as distance in time and space.<br><strong>中文：</strong> 大脑会将强混响解读为“远处 &#x2F; 过去”。</p>
+<p>和回忆一样：<br>不精确，但情绪密度极高。</p>
+<p>声音在这里不再是信息，而是一种时间标记。</p>
+<hr>
+<h2 id="律动感并不来自“快”，而来自时间可预测性"><a href="#律动感并不来自“快”，而来自时间可预测性" class="headerlink" title="律动感并不来自“快”，而来自时间可预测性"></a>律动感并不来自“快”，而来自时间可预测性</h2><p>这是一个常被误解的地方。</p>
+<p><strong>English:</strong> Groove is temporal predictability with micro-variation.<br><strong>中文：</strong> 律动感来自稳定时间结构中的微小偏差。</p>
+<p>嘻哈音乐，尤其是 808 驱动的编曲：</p>
+<ul>
+<li>极简结构</li>
+<li>强时间对齐</li>
+<li>极少和声干扰</li>
+</ul>
+<p>这让大脑可以轻松建立时间模型。</p>
+<p>而真正让人“想动”的，是那些：</p>
+<ul>
+<li>稍微靠后的拍子</li>
+<li>人声的轻微抢拍或拖拍</li>
+<li>非完全量化的节奏</li>
+</ul>
+<p>你的运动皮层并不是被命令去动，<br>而是<strong>已经提前参与了时间计算</strong>。</p>
+<hr>
+<h2 id="为什么这在某种意义上接近古典音乐"><a href="#为什么这在某种意义上接近古典音乐" class="headerlink" title="为什么这在某种意义上接近古典音乐"></a>为什么这在某种意义上接近古典音乐</h2><p>古典音乐做的是同一件事，只是时间尺度更长。</p>
+<p>一个奏鸣曲式的乐章，本质上是：</p>
+<ul>
+<li>建立预测</li>
+<li>偏离预测</li>
+<li>回归预测</li>
+</ul>
+<p><strong>English:</strong> Large-scale structure functions like rhythm over minutes.<br><strong>中文：</strong> 长时间结构，本质上也是一种节奏。</p>
+<p>区别只在反馈速度：</p>
+<ul>
+<li>嘻哈：毫秒级，身体先反应</li>
+<li>古典：分钟级，意识先理解</li>
+</ul>
+<p>但它们依赖的是同一套人类机制：<br><strong>我们对时间结构极度敏感。</strong></p>
+<hr>
+<h2 id="一个计算机视角的类比"><a href="#一个计算机视角的类比" class="headerlink" title="一个计算机视角的类比"></a>一个计算机视角的类比</h2><p>如果一定要用 CS 语言来描述：</p>
+<p>音乐不是数据，<br>而是一个<strong>实时调度系统</strong>。</p>
+<ul>
+<li>节拍是系统时钟</li>
+<li>结构是调度策略</li>
+<li>Drop 是上下文切换</li>
+<li>留白是 idle time</li>
+</ul>
+<p>而“爽感”，发生在系统负载刚好被释放的瞬间。</p>
+<p>不是因为算力更强，<br>而是因为<strong>调度终于顺畅了</strong>。</p>
+<hr>
+<h2 id="为什么鸡皮疙瘩往往出现在“不炸”的地方"><a href="#为什么鸡皮疙瘩往往出现在“不炸”的地方" class="headerlink" title="为什么鸡皮疙瘩往往出现在“不炸”的地方"></a>为什么鸡皮疙瘩往往出现在“不炸”的地方</h2><p>一个反直觉的事实：</p>
+<blockquote>
+<p><strong>Contrast &gt; Intensity</strong></p>
+</blockquote>
+<p>在高度刺激之后，<br>突然的克制、留白和简化，<br>反而更容易让神经系统失去参考点。</p>
+<p>于是身体先于理性做出反应。</p>
+<hr>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>音乐并不擅长“感动人”。</p>
+<p>它真正擅长的，是在某些瞬间，<br><strong>绕过理性，直接操纵我们对时间的感知。</strong></p>
+<p>当那句 <em>back in high school</em> 出现时，被唤醒的并不是过去本身，<br>而是——<br><strong>你曾经是另一个自己的事实。</strong></p>
+<p>而那种短暂的失重感，<br>可能正是人类在时间中，<br>为数不多能重新抓住自己的方式。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/12/15/%E8%93%9D%E7%89%99%E6%97%A0%E7%BA%BF%E5%94%B1%E9%92%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Zuwei Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zuwei Wang">
+      <meta itemprop="description" content="Personal blog of a CS student at Leeds">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Zuwei Wang">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/12/15/%E8%93%9D%E7%89%99%E6%97%A0%E7%BA%BF%E5%94%B1%E9%92%88/" class="post-title-link" itemprop="url">蓝牙无线唱针</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-12-15 18:41:55" itemprop="dateCreated datePublished" datetime="2025-12-15T18:41:55Z">2025-12-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-01-19 18:26:19" itemprop="dateModified" datetime="2026-01-19T18:26:19Z">2026-01-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%83%B3%E6%B3%95%E6%80%9D%E8%80%83/" itemprop="url" rel="index"><span itemprop="name">想法思考</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="一个没有被实现的想法：关于“中国版-Phase”的一次完整思考"><a href="#一个没有被实现的想法：关于“中国版-Phase”的一次完整思考" class="headerlink" title="一个没有被实现的想法：关于“中国版 Phase”的一次完整思考"></a>一个没有被实现的想法：关于“中国版 Phase”的一次完整思考</h1><p>有些想法并不是为了被立刻实现而出现的。<br>它们更像是一次对世界的试探——看看问题到底出在哪里，也看看自己到底在关心什么。</p>
+<p>这篇文章记录的，就是这样一个想法。</p>
+<hr>
+<h1 id="这个念头从哪来"><a href="#这个念头从哪来" class="headerlink" title="这个念头从哪来"></a>这个念头从哪来</h1><p>最早接触 Phase，是在了解 DJ 设备的时候。</p>
+<p>简单说，Phase 是一家法国公司做的无线 DJ 唱针系统。<br>它并不真正读取黑胶里的声音，而是用一个无线模块，保留转盘的物理操作感，同时把控制信号传给数字系统。<br>唱针还在，转盘还在，但“声音”已经不再被黑胶本身束缚。</p>
+<p>这套思路本身并不新，但它解决的问题非常明确：<br><strong>让 DJ 从“声音传输”里解放出来，只保留身体动作与节奏的关系。</strong></p>
+<p>当我开始关注中国的 DJ、派对和 turntable 使用场景时，一个明显的断层出现了：</p>
+<ul>
+<li>很多人在用控制器  </li>
+<li>一部分人还在用传统 timecode 黑胶  </li>
+<li>但 Phase 这套“无线 + 物理输入解耦”的叙事，几乎没有被系统性地介绍过</li>
+</ul>
+<p>更现实的一点是：<br>Phase 在中国没有明显的官方存在，没有官方店铺，也几乎没有中文语境下的完整讨论。</p>
+<p>于是一个问题自然出现了：<br><strong>如果 Phase 从未真正进入中国，会发生什么？</strong></p>
+<hr>
+<h1 id="我真正感兴趣的并不是硬件本身"><a href="#我真正感兴趣的并不是硬件本身" class="headerlink" title="我真正感兴趣的并不是硬件本身"></a>我真正感兴趣的并不是硬件本身</h1><p>一开始，我也会下意识地把这个想法称为“做一个中国版 Phase”。<br>但很快我意识到，这个说法并不准确。</p>
+<p>我真正感兴趣的，从来不是复制某个硬件产品。</p>
+<p>吸引我的，是下面这件事：</p>
+<blockquote>
+<p>在数字音乐高度成熟的时代，人是否还能保留“身体参与音乐”的仪式感？</p>
+</blockquote>
+<p>唱针、转盘、推碟、回拉，这些动作本身并不是最高效的。<br>但它们让音乐不只是被点击、被播放，而是被“操控”。</p>
+<p>Phase 的本质，其实是把<strong>物理动作</strong>和<strong>声音载体</strong>拆开。<br>一旦拆开，你就可以重新组合体验。</p>
+<p>从这个角度看，这个想法更像是一个体验问题，而不是一个工程问题。</p>
+<hr>
+<h1 id="为什么这个想法当时不可能被实现"><a href="#为什么这个想法当时不可能被实现" class="headerlink" title="为什么这个想法当时不可能被实现"></a>为什么这个想法当时不可能被实现</h1><p>即便如此，这个项目在现实中依然是不可行的。</p>
+<p>原因并不浪漫，也不复杂。</p>
+<p>首先是硬件本身的复杂度。<br>无线稳定性、延迟控制、电池、传感器精度，这些都不是一个人或一个小团队可以轻易解决的。</p>
+<p>其次是专利与边界问题。<br>即使不复制具体实现，类似产品在设计路径上也需要极其谨慎。</p>
+<p>更现实的一点是我当时的状态：<br>我没有成熟的供应链资源，也没有足够的时间和资金，把一个高风险硬件项目推进到可靠阶段。</p>
+<p>所以这个想法没有继续往“落地”方向走，是一个理性的选择，而不是失败。</p>
+<hr>
+<h1 id="但这个想法并没有消失"><a href="#但这个想法并没有消失" class="headerlink" title="但这个想法并没有消失"></a>但这个想法并没有消失</h1><p>虽然它没有变成产品，但它并没有被丢弃。</p>
+<p>后来我在做厂牌、办派对、做网站、做社区时，反复遇到类似的问题：</p>
+<ul>
+<li>技术是否一定要复杂，才能有价值  </li>
+<li>体验是否可以比效率更重要  </li>
+<li>一个系统，是否应该给人留出“参与感”</li>
+</ul>
+<p>回头看，这个无线唱针的想法，更像是一个坐标。<br>它让我更清楚自己在项目中真正关心的是什么：<br>不是功能堆叠，而是人与系统之间的关系。</p>
+<hr>
+<h1 id="把它留在这里"><a href="#把它留在这里" class="headerlink" title="把它留在这里"></a>把它留在这里</h1><p>我把这个想法写下来，并不是为了证明它正确，也不是为了为未完成找借口。</p>
+<p>只是想为当时那次认真思考，留下一个记录。</p>
+<p>也许它永远不会被实现。<br>但它已经完成了它该完成的使命。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/12/14/%E5%88%A9%E5%85%B9%E7%95%99%E5%AD%A6%E7%94%9F%E7%BD%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Zuwei Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zuwei Wang">
+      <meta itemprop="description" content="Personal blog of a CS student at Leeds">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Zuwei Wang">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/12/14/%E5%88%A9%E5%85%B9%E7%95%99%E5%AD%A6%E7%94%9F%E7%BD%91/" class="post-title-link" itemprop="url">利兹留学生网</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-12-14 06:08:08" itemprop="dateCreated datePublished" datetime="2025-12-14T06:08:08Z">2025-12-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-01-19 18:26:19" itemprop="dateModified" datetime="2026-01-19T18:26:19Z">2026-01-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E5%8E%86/" itemprop="url" rel="index"><span itemprop="name">项目经历</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="lzlxs-co-uk"><a href="#lzlxs-co-uk" class="headerlink" title="lzlxs.co.uk"></a>lzlxs.co.uk</h1><p>这是我大二期间创建的一个<a target="_blank" rel="noopener" href="https://lzlxs.co.uk/">网站</a>，纯静态内容展示。主要收集信息，比如利兹当地留学生做的私厨、派对、本地服务等等。</p>
+<h1 id="在利兹，留学生需要的不是“攻略”，而是一个真正有用的地方"><a href="#在利兹，留学生需要的不是“攻略”，而是一个真正有用的地方" class="headerlink" title="在利兹，留学生需要的不是“攻略”，而是一个真正有用的地方"></a>在利兹，留学生需要的不是“攻略”，而是一个真正有用的地方</h1><p>后来发现不是。</p>
+<p>问题是信息<strong>太碎了</strong>：<br>租房在一个群，兼职在另一个群；<br>二手群消息刷得比火车还快；<br>找中餐、找私厨、找人拼车，全靠缘分。  </p>
+<p>于是你会发现一个很奇怪的现象：<br>利兹有很多中国留学生，但<strong>没有一个真正属于留学生自己的信息中心</strong>。</p>
+<p>这就是「利兹留学生网」想做的事情。</p>
+<h1 id="这不是一个“什么都有”的网站"><a href="#这不是一个“什么都有”的网站" class="headerlink" title="这不是一个“什么都有”的网站"></a>这不是一个“什么都有”的网站</h1><p>但它会有你真的用得上的东西  </p>
+<p>我们不打算做百科全书，也不想复制别人的内容。  </p>
+<p>利兹留学生网关注的只有几件事：  </p>
+<ul>
+<li><p><strong>生活</strong>：租房避坑、区域差异、中超&#x2F;中餐&#x2F;外卖真实体验  </p>
+</li>
+<li><p><strong>学习</strong>：学校系统怎么用、选课和DDL怎么不崩、踩过的坑  </p>
+</li>
+<li><p><strong>赚钱</strong>：兼职信息、时薪、雷区、靠谱不靠谱  </p>
+</li>
+<li><p><strong>社交</strong>：活动、演出、派对、线下真实发生的事情</p>
+</li>
+</ul>
+<p>资源：二手、拼车、私厨、摄影、设计、维修……<br>都来自真实的利兹留学生，而不是广告模板  </p>
+<p>如果一个信息不能帮你<strong>省钱、省时间、少踩坑</strong>，那它大概率不会出现在这里。</p>
+<h1 id="为什么做这个网站？"><a href="#为什么做这个网站？" class="headerlink" title="为什么做这个网站？"></a>为什么做这个网站？</h1><p>因为微信群不是搜索引擎。<br>因为小红书不属于利兹。<br>因为真正有用的信息，往往只存在于“学长学姐的聊天记录”里。</p>
+<p>而聊天记录会消失，经验会被埋掉。</p>
+<p>我们想做的，是把这些<strong>零散的经验沉淀下来</strong>，<br>让后来的人少走几步弯路。</p>
+<h1 id="遇到的挑战"><a href="#遇到的挑战" class="headerlink" title="遇到的挑战"></a>遇到的挑战</h1><ul>
+<li>服务器问题</li>
+<li>网站宣传度</li>
+<li>信息获取</li>
+</ul>
+<p>把这个网站从0做到商家抢着和我合作抢广告位并没有那么容易，即使我把网站做的再好也没用。  </p>
+<p>因为我意识到这真的需要一个团队来完成，我需要营销，调研等等。我一个人貌似没有那么多精力和能力去做这件事。  </p>
+<p>所以我把项目暂时停止了。</p>
+<h1 id="网站功能"><a href="#网站功能" class="headerlink" title="网站功能"></a>网站功能</h1><p>查找利兹当地的私厨，服务，娱乐等一站式网站。  </p>
+<p>用户可以通过访问网站直接找到商家的联系方式。</p>
+<h1 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h1><p>GitHub 仓库：<a target="_blank" rel="noopener" href="https://github.com/Zuwei-Wang/leeds-chn">Zuwei-Wang&#x2F;leeds-chn</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">leeds-chn/</span><br><span class="line">├── ADMIN_GUIDE.md          # 管理员指南</span><br><span class="line">├── README.md               # 项目说明</span><br><span class="line">├── CNAME                   # DNS 配置文件</span><br><span class="line">├── robots.txt              # 爬虫协议</span><br><span class="line">├── sitemap.xml             # 网站地图</span><br><span class="line">├── admin.html              # 管理页面</span><br><span class="line">├── contact.html            # 联系页面</span><br><span class="line">├── details.html            # 详情页面</span><br><span class="line">├── entertainment.html      # 娱乐页面</span><br><span class="line">├── food.html               # 美食页面</span><br><span class="line">├── index.html              # 首页</span><br><span class="line">├── legal.html              # 法律页面</span><br><span class="line">├── search.html             # 搜索页面</span><br><span class="line">├── service.html            # 服务页面</span><br><span class="line">└── assets/                 # 资源文件目录</span><br><span class="line">    ├── banners/            # 横幅图片</span><br><span class="line">    │   ├── banner1.jpg</span><br><span class="line">    │   ├── banner2.jpg</span><br><span class="line">    │   └── banner3.jpg</span><br><span class="line">    ├── css/                # 样式表</span><br><span class="line">    │   └── style.css</span><br><span class="line">    ├── images/             # 图片目录</span><br><span class="line">    │   ├── 001/ ~ 030/     # 30个图片分类目录</span><br><span class="line">    │   └── ...</span><br><span class="line">    └── js/                 # JavaScript 文件</span><br><span class="line">        ├── admin.js        # 管理员脚本</span><br><span class="line">        └── main.js         # 主脚本</span><br><span class="line">└── data/                   # 数据目录</span><br><span class="line">    └── shops.json          # 商店数据</span><br></pre></td></tr></table></figure>
+
+<h2 id="主要文件说明"><a href="#主要文件说明" class="headerlink" title="主要文件说明"></a>主要文件说明</h2><table>
+<thead>
+<tr>
+<th>文件&#x2F;目录</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HTML 文件</td>
+<td>网站各个页面（首页、搜索、美食等）</td>
+</tr>
+<tr>
+<td>assets&#x2F;</td>
+<td>静态资源（CSS、JavaScript、图片等）</td>
+</tr>
+<tr>
+<td>data&#x2F;</td>
+<td>JSON 数据文件</td>
+</tr>
+<tr>
+<td>文档文件</td>
+<td>README、ADMIN_GUIDE 等说明文档</td>
+</tr>
+</tbody></table>
+<h1 id="这个网站会慢慢长成什么样？"><a href="#这个网站会慢慢长成什么样？" class="headerlink" title="这个网站会慢慢长成什么样？"></a>这个网站会慢慢长成什么样？</h1><p>老实说，现在它还不完美。<br>甚至可以说，它正在“生长中”。</p>
+<p>未来你可能会在这里看到：</p>
+<ul>
+<li><p>更清晰的利兹生活地图</p>
+</li>
+<li><p>更靠谱的留学生服务整合</p>
+</li>
+<li><p>由留学生自己发布、评价、筛选的资源</p>
+</li>
+<li><p>真正线下发生、而不是“转发三手海报”的活动</p>
+</li>
+</ul>
+<p>它不会一夜之间变大，但会<strong>一点点变得好用</strong>。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/12/13/Hello-Blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Zuwei Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zuwei Wang">
+      <meta itemprop="description" content="Personal blog of a CS student at Leeds">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Zuwei Wang">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/12/13/Hello-Blog/" class="post-title-link" itemprop="url">Hello-Blog</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-12-13 03:24:20" itemprop="dateCreated datePublished" datetime="2025-12-13T03:24:20Z">2025-12-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-01-19 18:26:20" itemprop="dateModified" datetime="2026-01-19T18:26:20Z">2026-01-19</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="我的第一篇个人博客"><a href="#我的第一篇个人博客" class="headerlink" title="我的第一篇个人博客"></a>我的第一篇个人博客</h1><p>人生第一次使用VScode窜写文章.</p>
+<h2 id="为啥要写博客？"><a href="#为啥要写博客？" class="headerlink" title="为啥要写博客？"></a>为啥要写博客？</h2><p>刚开始觉得这玩意和写备忘录或者说写知乎没啥区别，但其实个人博客是一个永远不会消失的东西。不会因为其他的因素干扰你，不会在意别人审判你写的内容，这是最重要的。  </p>
+<p>还有就是我记得大一刚开学的时候好像老师就让我们有写博客的习惯，记录自己写代码遇到的坑。</p>
+<h2 id="这是什么时间段？"><a href="#这是什么时间段？" class="headerlink" title="这是什么时间段？"></a>这是什么时间段？</h2><p>今天是我大二课程第一学期结束的周五，我的所有作业都交完了，也安排好了圣诞节去哪里旅游，应该是阿姆斯特丹和挪威。</p>
+<h2 id="博客以后准备都写什么？"><a href="#博客以后准备都写什么？" class="headerlink" title="博客以后准备都写什么？"></a>博客以后准备都写什么？</h2><p>可能随心所欲吧，毕竟是个人博客，想写啥写啥，也不指望面试官会看，我觉得还是记录自己的当下比较有意义。</p>
+<h2 id="目前的一些感悟"><a href="#目前的一些感悟" class="headerlink" title="目前的一些感悟"></a>目前的一些感悟</h2><p>感觉自己在这一学期学习的更加透彻了，我觉得AI对我的影响特别大。尤其是身在海外，我的感触特别深，直接颠覆了我的生活。  </p>
+<p>我现在做饭也要问AI，看电视剧没看懂也要问AI，更何况是计算机专业中遇到的问题，都是一些比较绝对的，逻辑性的。这让我的学习效率在AI帮助下大幅提高，我仿佛有更多的时间来做别的事情了。  </p>
+<p>从刚开始连GitHub都玩不明白，到现在可以自己搭建网站。我发现自己总是喜欢在困难中学到新东西。  </p>
+<h2 id="更新节奏"><a href="#更新节奏" class="headerlink" title="更新节奏"></a>更新节奏</h2><p>虽然说博客这种东西没有要求要多久必须写一篇，但我还是想尽量一个月发布四篇，毕竟不能让我的域名白买了。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zuwei Wang</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

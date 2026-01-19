@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":6,"unescape":true,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="一个没有被实现的想法：关于“中国版 Phase”的一次完整思考有些想法并不是为了被立刻实现而出现的。它们更像是一次对世界的试探——看看问题到底出在哪里，也看看自己到底在关心什么。 这篇文章记录的，就是这样一个想法。  这个念头从哪来最早接触 Phase，是在了解 DJ 设备的时候。 简单说，Phase 是一家法国公司做的无线 DJ 唱针系统。它并不真正读取黑胶里的声音，而是用一个无线模块，保留转盘">
+<meta property="og:type" content="article">
+<meta property="og:title" content="蓝牙无线唱针">
+<meta property="og:url" content="http://example.com/2025/12/15/%E8%93%9D%E7%89%99%E6%97%A0%E7%BA%BF%E5%94%B1%E9%92%88/index.html">
+<meta property="og:site_name" content="Zuwei Wang">
+<meta property="og:description" content="一个没有被实现的想法：关于“中国版 Phase”的一次完整思考有些想法并不是为了被立刻实现而出现的。它们更像是一次对世界的试探——看看问题到底出在哪里，也看看自己到底在关心什么。 这篇文章记录的，就是这样一个想法。  这个念头从哪来最早接触 Phase，是在了解 DJ 设备的时候。 简单说，Phase 是一家法国公司做的无线 DJ 唱针系统。它并不真正读取黑胶里的声音，而是用一个无线模块，保留转盘">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-12-15T18:41:55.000Z">
+<meta property="article:modified_time" content="2026-01-19T18:26:19.598Z">
+<meta property="article:author" content="Zuwei Wang">
+<meta property="article:tag" content="DJ设备">
+<meta property="article:tag" content="产品设计">
+<meta property="article:tag" content="创意想法">
+<meta property="article:tag" content="黑胶">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2025/12/15/%E8%93%9D%E7%89%99%E6%97%A0%E7%BA%BF%E5%94%B1%E9%92%88/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2025/12/15/%E8%93%9D%E7%89%99%E6%97%A0%E7%BA%BF%E5%94%B1%E9%92%88/","path":"2025/12/15/蓝牙无线唱针/","title":"蓝牙无线唱针"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>蓝牙无线唱针 | Zuwei Wang</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Zuwei Wang</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Notes on CS, thinking, and life</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E6%B2%A1%E6%9C%89%E8%A2%AB%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%83%B3%E6%B3%95%EF%BC%9A%E5%85%B3%E4%BA%8E%E2%80%9C%E4%B8%AD%E5%9B%BD%E7%89%88-Phase%E2%80%9D%E7%9A%84%E4%B8%80%E6%AC%A1%E5%AE%8C%E6%95%B4%E6%80%9D%E8%80%83"><span class="nav-number">1.</span> <span class="nav-text">一个没有被实现的想法：关于“中国版 Phase”的一次完整思考</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%99%E4%B8%AA%E5%BF%B5%E5%A4%B4%E4%BB%8E%E5%93%AA%E6%9D%A5"><span class="nav-number">2.</span> <span class="nav-text">这个念头从哪来</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%91%E7%9C%9F%E6%AD%A3%E6%84%9F%E5%85%B4%E8%B6%A3%E7%9A%84%E5%B9%B6%E4%B8%8D%E6%98%AF%E7%A1%AC%E4%BB%B6%E6%9C%AC%E8%BA%AB"><span class="nav-number">3.</span> <span class="nav-text">我真正感兴趣的并不是硬件本身</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B8%AA%E6%83%B3%E6%B3%95%E5%BD%93%E6%97%B6%E4%B8%8D%E5%8F%AF%E8%83%BD%E8%A2%AB%E5%AE%9E%E7%8E%B0"><span class="nav-number">4.</span> <span class="nav-text">为什么这个想法当时不可能被实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%86%E8%BF%99%E4%B8%AA%E6%83%B3%E6%B3%95%E5%B9%B6%E6%B2%A1%E6%9C%89%E6%B6%88%E5%A4%B1"><span class="nav-number">5.</span> <span class="nav-text">但这个想法并没有消失</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%8A%E5%AE%83%E7%95%99%E5%9C%A8%E8%BF%99%E9%87%8C"><span class="nav-number">6.</span> <span class="nav-text">把它留在这里</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zuwei Wang"
+      src="/images/avatar.svg">
+  <p class="site-author-name" itemprop="name">Zuwei Wang</p>
+  <div class="site-description" itemprop="description">Personal blog of a CS student at Leeds</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zuwei-wang" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zuwei-wang" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:stevenwangzv@gmail.com" title="E-Mail → mailto:stevenwangzv@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/12/15/%E8%93%9D%E7%89%99%E6%97%A0%E7%BA%BF%E5%94%B1%E9%92%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Zuwei Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zuwei Wang">
+      <meta itemprop="description" content="Personal blog of a CS student at Leeds">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="蓝牙无线唱针 | Zuwei Wang">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          蓝牙无线唱针
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-12-15 18:41:55" itemprop="dateCreated datePublished" datetime="2025-12-15T18:41:55Z">2025-12-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-01-19 18:26:19" itemprop="dateModified" datetime="2026-01-19T18:26:19Z">2026-01-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%83%B3%E6%B3%95%E6%80%9D%E8%80%83/" itemprop="url" rel="index"><span itemprop="name">想法思考</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="一个没有被实现的想法：关于“中国版-Phase”的一次完整思考"><a href="#一个没有被实现的想法：关于“中国版-Phase”的一次完整思考" class="headerlink" title="一个没有被实现的想法：关于“中国版 Phase”的一次完整思考"></a>一个没有被实现的想法：关于“中国版 Phase”的一次完整思考</h1><p>有些想法并不是为了被立刻实现而出现的。<br>它们更像是一次对世界的试探——看看问题到底出在哪里，也看看自己到底在关心什么。</p>
+<p>这篇文章记录的，就是这样一个想法。</p>
+<hr>
+<h1 id="这个念头从哪来"><a href="#这个念头从哪来" class="headerlink" title="这个念头从哪来"></a>这个念头从哪来</h1><p>最早接触 Phase，是在了解 DJ 设备的时候。</p>
+<p>简单说，Phase 是一家法国公司做的无线 DJ 唱针系统。<br>它并不真正读取黑胶里的声音，而是用一个无线模块，保留转盘的物理操作感，同时把控制信号传给数字系统。<br>唱针还在，转盘还在，但“声音”已经不再被黑胶本身束缚。</p>
+<p>这套思路本身并不新，但它解决的问题非常明确：<br><strong>让 DJ 从“声音传输”里解放出来，只保留身体动作与节奏的关系。</strong></p>
+<p>当我开始关注中国的 DJ、派对和 turntable 使用场景时，一个明显的断层出现了：</p>
+<ul>
+<li>很多人在用控制器  </li>
+<li>一部分人还在用传统 timecode 黑胶  </li>
+<li>但 Phase 这套“无线 + 物理输入解耦”的叙事，几乎没有被系统性地介绍过</li>
+</ul>
+<p>更现实的一点是：<br>Phase 在中国没有明显的官方存在，没有官方店铺，也几乎没有中文语境下的完整讨论。</p>
+<p>于是一个问题自然出现了：<br><strong>如果 Phase 从未真正进入中国，会发生什么？</strong></p>
+<hr>
+<h1 id="我真正感兴趣的并不是硬件本身"><a href="#我真正感兴趣的并不是硬件本身" class="headerlink" title="我真正感兴趣的并不是硬件本身"></a>我真正感兴趣的并不是硬件本身</h1><p>一开始，我也会下意识地把这个想法称为“做一个中国版 Phase”。<br>但很快我意识到，这个说法并不准确。</p>
+<p>我真正感兴趣的，从来不是复制某个硬件产品。</p>
+<p>吸引我的，是下面这件事：</p>
+<blockquote>
+<p>在数字音乐高度成熟的时代，人是否还能保留“身体参与音乐”的仪式感？</p>
+</blockquote>
+<p>唱针、转盘、推碟、回拉，这些动作本身并不是最高效的。<br>但它们让音乐不只是被点击、被播放，而是被“操控”。</p>
+<p>Phase 的本质，其实是把<strong>物理动作</strong>和<strong>声音载体</strong>拆开。<br>一旦拆开，你就可以重新组合体验。</p>
+<p>从这个角度看，这个想法更像是一个体验问题，而不是一个工程问题。</p>
+<hr>
+<h1 id="为什么这个想法当时不可能被实现"><a href="#为什么这个想法当时不可能被实现" class="headerlink" title="为什么这个想法当时不可能被实现"></a>为什么这个想法当时不可能被实现</h1><p>即便如此，这个项目在现实中依然是不可行的。</p>
+<p>原因并不浪漫，也不复杂。</p>
+<p>首先是硬件本身的复杂度。<br>无线稳定性、延迟控制、电池、传感器精度，这些都不是一个人或一个小团队可以轻易解决的。</p>
+<p>其次是专利与边界问题。<br>即使不复制具体实现，类似产品在设计路径上也需要极其谨慎。</p>
+<p>更现实的一点是我当时的状态：<br>我没有成熟的供应链资源，也没有足够的时间和资金，把一个高风险硬件项目推进到可靠阶段。</p>
+<p>所以这个想法没有继续往“落地”方向走，是一个理性的选择，而不是失败。</p>
+<hr>
+<h1 id="但这个想法并没有消失"><a href="#但这个想法并没有消失" class="headerlink" title="但这个想法并没有消失"></a>但这个想法并没有消失</h1><p>虽然它没有变成产品，但它并没有被丢弃。</p>
+<p>后来我在做厂牌、办派对、做网站、做社区时，反复遇到类似的问题：</p>
+<ul>
+<li>技术是否一定要复杂，才能有价值  </li>
+<li>体验是否可以比效率更重要  </li>
+<li>一个系统，是否应该给人留出“参与感”</li>
+</ul>
+<p>回头看，这个无线唱针的想法，更像是一个坐标。<br>它让我更清楚自己在项目中真正关心的是什么：<br>不是功能堆叠，而是人与系统之间的关系。</p>
+<hr>
+<h1 id="把它留在这里"><a href="#把它留在这里" class="headerlink" title="把它留在这里"></a>把它留在这里</h1><p>我把这个想法写下来，并不是为了证明它正确，也不是为了为未完成找借口。</p>
+<p>只是想为当时那次认真思考，留下一个记录。</p>
+<p>也许它永远不会被实现。<br>但它已经完成了它该完成的使命。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%88%9B%E6%84%8F%E6%83%B3%E6%B3%95/" rel="tag"># 创意想法</a>
+              <a href="/tags/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/" rel="tag"># 产品设计</a>
+              <a href="/tags/%E9%BB%91%E8%83%B6/" rel="tag"># 黑胶</a>
+              <a href="/tags/DJ%E8%AE%BE%E5%A4%87/" rel="tag"># DJ设备</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/12/14/%E5%88%A9%E5%85%B9%E7%95%99%E5%AD%A6%E7%94%9F%E7%BD%91/" rel="prev" title="利兹留学生网">
+                  <i class="fa fa-angle-left"></i> 利兹留学生网
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/12/17/%E9%9F%B3%E4%B9%90%E7%A7%91%E5%AD%A6%E5%88%86%E6%9E%90/" rel="next" title="科学角度分析嘻哈音乐">
+                  科学角度分析嘻哈音乐 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zuwei Wang</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
